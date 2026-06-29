@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Video Downloader</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f172a,#1d4ed8,#7c3aed,#0f172a);
+background-size:300% 300%;
+animation:bg 8s infinite;
+overflow:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+text-align:center;
+}
+
+.logo{
+width:180px;
+height:180px;
+border-radius:30px;
+animation:float 2s infinite ease-in-out;
+box-shadow:0 0 30px rgba(255,255,255,.3);
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+h1{
+color:#fff;
+margin-top:20px;
+font-size:28px;
+}
+
+p{
+color:#ddd;
+margin-top:8px;
+}
+
+.loader{
+width:260px;
+height:8px;
+background:rgba(255,255,255,.2);
+margin:30px auto 10px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.bar{
+width:0%;
+height:100%;
+background:linear-gradient(90deg,#00E5FF,#00FF95,#FFD600);
+animation:load 3s linear forwards;
+}
+
+@keyframes load{
+0%{width:0;}
+100%{width:100%;}
+}
+
+.loading{
+color:white;
+font-size:15px;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{
+opacity:.5;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="splash.png" class="logo">
+
+<h1>Pro Video Downloader</h1>
+
+<p>Facebook • TikTok • YouTube</p>
+
+<div class="loader">
+<div class="bar"></div>
+</div>
+
+<div class="loading">
+Loading...
+</div>
+
+</div>
+
+<script>
+
+setTimeout(function(){
+
+window.location.href="index.html";
+
+},3000);
+
+</script>
+
+</body>
+</html>
